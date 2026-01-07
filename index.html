@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyGymBro – Your Smart Gym Companion</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/d601631c17.js" crossorigin="anonymous"></script>
+</head>
+
+<div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-live="polite">
+  <div class="cookie-content">
+    <h2 id="cookie-title">Cookie Preferences</h2>
+    <p>
+      We use cookies to ensure basic functionality and to improve your experience.
+      Analytics and marketing cookies are used only with your consent.
+      Learn more in our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button id="accept-cookies">Accept All</button>
+      <button id="reject-cookies" class="secondary">Reject Non-Essential</button>
+    </div>
+  </div>
+</div>
+<script>
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const rejectBtn = document.getElementById("reject-cookies");
+
+  if (!localStorage.getItem("cookieConsent")) {
+    cookieBanner.style.display = "block";
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    cookieBanner.style.display = "none";
+  });
+
+  rejectBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "essential");
+    cookieBanner.style.display = "none";
+  });
+</script>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <img src="assets/gymbro.png" alt="MyGymBro logo">
+    <nav>
+      <a href="product.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+ <section class="hero">
+  <h1>Your Smart Gym Companion</h1>
+  <p>
+    Track workouts, calculate calories, and get personalized nutrition plans.
+    Start your journey to a healthier lifestyle with MyGymBro.
+  </p>
+
+  <div class="hero-buttons">
+    <a class="button" href="pricing.html">Start Free Trial</a>
+    <a class="button secondary" href="product.html">Explore Features</a>
+  </div>
+</section>
+<section>
+  <h2>Everything You Need</h2>
+  <p>Comprehensive tools designed to help you achieve your fitness goals.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>Workout Tracking <i class="fa-solid fa-person-running"></i></h3>
+      <p>Log and track your exercises with detailed progress analytics.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Calorie Calculator <i class="fa-solid fa-fire-flame-curved"></i></h3>
+      <p>Accurately calculate burned calories for every workout session.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Nutrition Plans <i class="fa-solid fa-bowl-food"></i></h3>
+      <p>Personalized diet plans created with certified nutritionists.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Daily Goals <i class="fa-solid fa-clipboard-check"></i></h3>
+      <p>Set and achieve daily nutrition and fitness targets.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Beginner Friendly <i class="fa-solid fa-bullseye"></i></h3>
+      <p>Guided exercises with detailed explanations for newcomers.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Science-Based <i class="fa-solid fa-atom"></i></h3>
+      <p>All recommendations backed by fitness and nutrition science.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="accessibility.html">Accessibility</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="license.html">License</a>
+    <a href="imprint.html">Imprint</a>
+    <a href="credits.html">Credits</a>
+    <a href="brands.html">Brands & Trademarks</a>
+  </div>
+  <p style="font-size: x-small;">© 2026 MyGymBro. All rights reserved. Made with care for your health journey. </p>
+</footer>
+
+</body>
+</html>
